@@ -166,7 +166,7 @@ class Okex(Account):
         time.sleep(random.randint(delay[0], delay[1]))
         self.wait_balance(int(amount_to_withdrawal * 0.8), rpc=self.rpc, contract_address=self.w3.to_checksum_address('0x7F5c764cBc14f9669B88837ca1490cCa17c31607'))
         # sleeping_between_transactions()
-        return (f'\n{SUCCESS}OKx: Withdraw {"{:0.4f}".format(amount_to_withdrawal)} ETH')
+        return (f'\n{SUCCESS}OKx: Withdraw {"{:0.4f}".format(amount_to_withdrawal)} {symbolWithdraw}')
 
     def transfer_from_subaccount(self):
         exchange = ccxt.okx({
