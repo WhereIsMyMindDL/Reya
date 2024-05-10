@@ -31,7 +31,7 @@ class Reya(Account):
         self.session.headers['user-agent'] = random_ua()
         self.proxy = proxy
         if self.proxy != None:
-            self.session.proxies.update({'http': self.proxy})
+            self.session.proxies.update({'http': "http://" + self.proxy})
 
     @retry
     def login(self):
